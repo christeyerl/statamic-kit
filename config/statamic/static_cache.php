@@ -61,8 +61,8 @@ return [
         'class' => null,
 
         'urls' => [
-            'sitemap.xml',
-            'sitemaps.xml',
+            '/sitemap.xml',
+            '/sitemaps.xml',
         ],
 
     ],
