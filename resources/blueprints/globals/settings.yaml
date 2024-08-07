@@ -1,0 +1,162 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: site_title
+            field:
+              type: text
+              display: 'Site Title'
+              instructions: "The title for the website. Defaults to Laravel's App Name."
+              width: 75
+              instructions_position: below
+          -
+            handle: separator
+            field:
+              options:
+                '|': '|'
+                /: /
+                '>': '>'
+                '-': '-'
+              type: select
+              display: Separator
+              width: 25
+      -
+        display: Contacts
+        fields:
+          -
+            handle: phone
+            field:
+              input_type: tel
+              placeholder: '+421 901 234 567'
+              type: text
+              display: Phone
+              width: 50
+          -
+            handle: email
+            field:
+              input_type: email
+              placeholder: info@example.com
+              type: text
+              display: Email
+              width: 50
+          -
+            handle: address
+            field:
+              type: group
+              display: Address
+              fields:
+                -
+                  handle: street
+                  field:
+                    type: text
+                    display: Street
+                    width: 75
+                -
+                  handle: post_code
+                  field:
+                    type: text
+                    display: 'Post Code'
+                    width: 25
+                -
+                  handle: city
+                  field:
+                    type: text
+                    display: City
+                    width: 50
+                -
+                  handle: country
+                  field:
+                    type: text
+                    display: Country
+                    width: 50
+  appearance:
+    display: Appearance
+    sections:
+      -
+        fields:
+          -
+            handle: theme_light_color
+            field:
+              type: color
+              display: 'Theme Light Color'
+              width: 50
+          -
+            handle: theme_dark_color
+            field:
+              type: color
+              display: 'Theme Dark Color'
+              width: 50
+      -
+        display: Favicons
+        fields:
+          -
+            handle: favicon_svg
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: 'Favicon (SVG)'
+              instructions: 'The full color SVG favicon for [modern browsers](https://caniuse.com/link-icon-svg).'
+              width: 50
+              instructions_position: below
+          -
+            handle: favicon_png
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: 'Favicon (PNG)'
+              width: 50
+  analytics:
+    display: Analytics
+    sections:
+      -
+        display: Trackers
+        fields:
+          -
+            handle: analytics_fathom
+            field:
+              type: toggle
+              display: Fathom
+              width: 50
+          -
+            handle: spacer_1
+            field:
+              type: spacer
+              display: Spacer
+              width: 50
+              unless:
+                analytics_fathom: 'equals true'
+          -
+            handle: analytics_fathom_site_id
+            field:
+              type: text
+              display: 'Site ID'
+              width: 50
+              if:
+                analytics_fathom: 'equals true'
+          -
+            handle: analytics_google
+            field:
+              type: toggle
+              display: 'Google Analytics'
+              width: 50
+          -
+            handle: spacer_2
+            field:
+              type: spacer
+              display: Spacer
+              width: 50
+              unless:
+                analytics_google_analytics: 'equals true'
+          -
+            handle: analytics_google_tracking_id
+            field:
+              type: text
+              display: 'Tracking ID'
+              width: 50
+              if:
+                analytics_google_analytics: 'equals true'

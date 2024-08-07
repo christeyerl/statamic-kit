@@ -1,0 +1,23 @@
+title: 'Utilities/Open Graph'
+fields:
+  -
+    handle: og_title
+    field:
+      type: text
+      display: 'Open Graph Title'
+      instructions: "This entry's OG title, defaults to custom meta title and title."
+  -
+    handle: og_description
+    field:
+      type: textarea
+      display: 'Open Graph Description'
+      instructions: "This entry's OG description, defaults to meta description."
+  -
+    handle: og_image
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: 'Open Graph Image'
+      instructions: "This entry's OG image. Defaults to global site OG image. The recommended size is 1200 x 630 px."
+      instructions_position: below

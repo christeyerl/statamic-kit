@@ -1,0 +1,172 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'Open Graph'
+        fields:
+          -
+            handle: og_image
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: 'Default OG Image'
+              instructions: 'The recommended size is 1200 x 630 px.'
+              instructions_position: below
+  schema:
+    display: Schema
+    sections:
+      -
+        fields:
+          -
+            handle: schema_type
+            field:
+              options:
+                none: none
+                organization: organization
+                place: place
+                person: person
+                custom: custom
+              type: button_group
+              display: Type
+          -
+            handle: schema_organization
+            field:
+              type: group
+              display: Organization
+              if:
+                schema_type: 'equals organization'
+              fields:
+                -
+                  handle: company
+                  field:
+                    type: text
+                    display: Company
+          -
+            handle: schema_place
+            field:
+              type: group
+              display: Place
+              if:
+                schema_type: 'equals place'
+              fields:
+                -
+                  handle: name
+                  field:
+                    type: text
+                    display: Name
+          -
+            handle: schema_person
+            field:
+              type: group
+              display: Person
+              if:
+                schema_type: 'equals person'
+              fields:
+                -
+                  handle: name
+                  field:
+                    type: text
+                    display: Name
+          -
+            handle: schema_custom
+            field:
+              indent_type: spaces
+              type: code
+              display: 'Custom Schema'
+              instructions: 'Custom [Schema.org](https://schema.org) data in JSON-LD encoding.'
+              if:
+                schema_type: 'equals custom'
+  socials:
+    display: Socials
+    sections:
+      -
+        fields:
+          -
+            handle: links
+            field:
+              type: grid
+              display: 'Social links'
+              fields:
+                -
+                  handle: icon
+                  field:
+                    directory: resources/svg/icons
+                    folder: social
+                    type: icon
+                    display: Icon
+                    width: 25
+                -
+                  handle: network
+                  field:
+                    placeholder: Facebook
+                    type: text
+                    display: Network
+                    width: 25
+                    validate:
+                      - required
+                -
+                  handle: url
+                  field:
+                    input_type: url
+                    placeholder: 'https://'
+                    type: text
+                    display: URL
+                    width: 50
+                    validate:
+                      - required
+  redirects:
+    display: Redirects
+    sections:
+      -
+        fields:
+          -
+            handle: redirects
+            field:
+              add_row: 'Add redirect'
+              type: grid
+              display: Entries
+              fields:
+                -
+                  handle: old_url
+                  field:
+                    type: text
+                    display: 'Old URL'
+                    width: 25
+                -
+                  handle: new_url
+                  field:
+                    type: link
+                    display: 'New URL'
+                    width: 50
+                -
+                  handle: response
+                  field:
+                    options:
+                      301: 'Permanent (301)'
+                      302: 'Temporary (302)'
+                    type: select
+                    display: Response
+                    instructions: 'The HTTP response code'
+                    width: 25
+                    validate:
+                      - required
+                      - 'in:301,302'
+  sitemap:
+    display: Sitemap
+    sections:
+      -
+        fields:
+          -
+            handle: sitemap_collections
+            field:
+              type: collections
+              display: Collections
+              instructions: 'Select which collections to include in the sitemap.xml.'
+          -
+            handle: sitemap_taxonomies
+            field:
+              type: taxonomies
+              display: Taxonomies
+              instructions: 'Select which taxonomies to include in the sitemap.xml.'

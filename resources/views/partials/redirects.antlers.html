@@ -1,0 +1,3 @@
+{{ seo:redirects | where('old_url', {current_uri}) }}
+    {{ redirect :to="new_url" response="{response}" }}
+{{ /seo:redirects }}

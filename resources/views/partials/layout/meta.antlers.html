@@ -1,0 +1,28 @@
+<title>
+    {{ meta_title ?? (title + ' ' + settings:separator + ' ' + (settings:site_title ?? site:name)) }}
+</title>
+
+<meta name="description" content="{{ meta_description | strip_tags | entities | trim }}" />
+
+{{ if environment === 'production' }}
+    <meta name="robots" content="{{ meta_noindex ? 'noindex' : 'index' }},{{ meta_nofollow ? 'nofollow' : 'follow' }}" />
+{{ else }}
+    <meta name="robots" content="noindex,nofollow" />
+{{ /if }}
+
+{{ unless meta_noindex }}
+    {{ locales all="false" }}
+        <link rel="alternate" hreflang="{{ locale:full | replace('_', '-') }}" href="{{ permalink }}" />
+    {{ /locales }}
+{{ /unless }}
+
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="{{ settings:theme_light_color }}" />
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="{{ settings:theme_dark_color }}" />
+
+<meta property="og:title" content="{{ (meta_title ?? title) | strip_tags | entities | trim }}" />
+<meta property="og:description" content="{{ meta_description | strip_tags | entities | trim }}" />
+<meta property="og:image" content="{{ og_image ?? settings:og_image ?? '' }}" />
+<meta property="og:site_name" content="{{ settings:site_title ?? site:name }}" />
+<meta property="og:locale" content="{{ site:locale }}" />
+<meta property="og:url" content="{{ permalink }}" />
+<meta property="og:type" content="website" />

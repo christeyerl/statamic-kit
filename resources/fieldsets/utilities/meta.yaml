@@ -1,0 +1,33 @@
+title: Utilities/Meta
+fields:
+  -
+    handle: meta_title
+    field:
+      character_limit: 70
+      antlers: true
+      type: text
+      display: 'Meta Title'
+      instructions: "This entry's title, defaults to title and site name."
+  -
+    handle: meta_description
+    field:
+      character_limit: '155'
+      type: textarea
+      display: 'Meta Description'
+      instructions: "This entry's meta description."
+  -
+    handle: meta_noindex
+    field:
+      type: toggle
+      display: Noindex
+      instructions: 'Exclude this entry from indexing and the sitemap for crawlers.'
+      width: 50
+      instructions_position: below
+  -
+    handle: meta_nofollow
+    field:
+      type: toggle
+      display: Nofollow
+      instructions: 'Instruct crawlers not to follow links on this entry.'
+      width: 50
+      instructions_position: below

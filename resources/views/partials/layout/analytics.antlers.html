@@ -1,0 +1,15 @@
+{{ if environment === 'production' }}
+    {{ if settings:analytics_fathom }}
+        <script src="https://cdn.usefathom.com/script.js" site="{{ settings:analytics_fathom_site_id }}" defer></script>
+    {{ /if }}
+    {{ if settings:analytics_google }}
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{ settings:analytics_google_tracking_id }}"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '{{ settings:analytics_google_tracking_id }}', { 'anonymize_ip': true });
+        </script>
+    {{ /if }}
+{{ /if }}

@@ -1,0 +1,9 @@
+title: Utilities/Schema
+fields:
+  -
+    handle: schema_custom
+    field:
+      indent_type: spaces
+      type: code
+      display: 'Custom Schema'
+      instructions: 'Custom [Schema.org](https://schema.org) data in JSON-LD encoding.'
