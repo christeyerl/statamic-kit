@@ -1,9 +1,9 @@
 {
-    "name": "cosamey/starter-kit",
+    "name": "cosamey/statamic-kit",
     "extra": {
         "statamic": {
-            "name": "Starter Kit",
-            "description": "Starter Kit starter kit"
+            "name": "Statamic Kit",
+            "description": "Opinioted Statamic starter kit"
         }
     }
 }
