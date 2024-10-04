@@ -22,6 +22,7 @@
             {{ /results }}
         {{ /collection }}
     {{ /seo:sitemap_collections }}
+
     {{ seo:sitemap_taxonomies }}
         {{ taxonomy from="{handle}" seo_noindex:not="true" as="results" }}
             {{ results }}

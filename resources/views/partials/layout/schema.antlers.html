@@ -1,20 +1,20 @@
 {{ if not schema_custom }}
     {{ if setting:schema_type !== 'none' }}
         <script type="application/ld+json">
-                    {
-                        "@context": "https://schema.org",
-                        "url": "{{ config:app:url }}",
-            {{ if settings:schema_type === 'organization' }}
+            {
+                "@context": "https://schema.org",
+                "url": "{{ config:app:url }}",
+                {{ if settings:schema_type === 'organization' }}
                     "@type": "Organization",
                     "name": "{{ settings:organization:name }}",
-            {{ elseif settings:schema_type === 'place' }}
+                {{ elseif settings:schema_type === 'place' }}
                     "@type": "LocalBusiness",
                     "name": "{{ settings:place:name }}",
-            {{ elseif settings:schema_type === 'person' }}
+                {{ elseif settings:schema_type === 'person' }}
                     "@type": "Person",
                     "name": "{{ settings:person:name }}",
-            {{ /if }}
-            "telephone": "{{ settings:phone }}",
+                {{ /if }}
+                "telephone": "{{ settings:phone }}",
                 "email": "{{ settings:email }}",
                 "address": {
                     "@type": "PostalAddress",

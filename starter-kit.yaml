@@ -1,6 +1,10 @@
 export_paths:
   - config/statamic/cp.php
   - config/statamic/static_caching.php
+  - content/collections/pages/home.yaml
+  - content/collections/pages.yaml
+  - content/globals/seo.yaml
+  - content/globals/settings.yaml
   - resources/blueprints/collections/pages/page.yaml
   - resources/blueprints/globals/seo.yaml
   - resources/blueprints/globals/settings.yaml
@@ -10,12 +14,15 @@ export_paths:
   - resources/fieldsets/utilities/schema.yaml
   - resources/fieldsets/utilities/schema.yaml
   - resources/fieldsets/utilities/sitemap.yaml
+  - resources/views/errors/404.antlers.html
+  - resources/views/pages/home.antlers.html
   - resources/views/partials/layout/analytics.antlers.html
   - resources/views/partials/layout/favicons.antlers.html
   - resources/views/partials/layout/meta.antlers.html
   - resources/views/partials/layout/schema.antlers.html
   - resources/views/partials/sitemap/index.antlers.html
   - resources/views/partials/sitemap/show.antlers.html
+  - resources/views/partials/button.antlers.html
   - resources/views/partials/redirects.antlers.html
   - resources/views/layout.antlers.html
   - resources/views/page.antlers.html

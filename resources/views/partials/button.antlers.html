@@ -1,0 +1,7 @@
+<{{ href ? 'a' : 'button' }}
+    {{ href | attribute:href }}
+    {{ target | attribute:target }}
+    {{ type | attribute:type }}
+>
+    {{ slot }}
+</{{ href ? 'a' : 'button' }}>

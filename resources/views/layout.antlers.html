@@ -4,15 +4,15 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        {{ partial:layout/meta }}
+        {{ partial:layout.meta }}
 
-        {{ partial:layout/favicons }}
+        {{ partial:layout.favicons }}
 
         {{ vite src="resources/js/site.js|resources/css/site.css" }}
 
-        {{ partial:layout/analytics }}
+        {{ partial:layout.analytics }}
 
-        {{ partial:layout/schema }}
+        {{ partial:layout.schema }}
 
         {{ stack:head }}
     </head>
