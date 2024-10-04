@@ -1,6 +1,6 @@
 export_paths:
   - config/statamic/cp.php
-  - config/statamic/static_cache.php
+  - config/statamic/static_caching.php
   - resources/blueprints/collections/pages/page.yaml
   - resources/blueprints/globals/seo.yaml
   - resources/blueprints/globals/settings.yaml
