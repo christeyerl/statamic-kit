@@ -5,7 +5,7 @@ use Statamic\Facades\{Site, URL};
 
 Route::statamic(
     '/sitemaps.xml',
-    'partials/sitemap/index',
+    'utilities/sitemap/index',
     [
         'layout' => null,
         'content_type' => 'application/xml',
@@ -17,7 +17,7 @@ Site::all()->each(function (Statamic\Sites\Site $site): void {
 
     Route::statamic(
         URL::tidy($relativeUrl.'/sitemap.xml'),
-        'partials/sitemap/show',
+        'utilities/sitemap/show',
         [
             'layout' => null,
             'content_type' => 'application/xml',
