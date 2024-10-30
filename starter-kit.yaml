@@ -20,8 +20,8 @@ export_paths:
   - resources/views/partials/layout/favicons.antlers.html
   - resources/views/partials/layout/meta.antlers.html
   - resources/views/partials/layout/schema.antlers.html
-  - resources/views/partials/sitemap/index.antlers.html
-  - resources/views/partials/sitemap/show.antlers.html
+  - resources/views/utilities/sitemap/index.antlers.html
+  - resources/views/utilities/sitemap/show.antlers.html
   - resources/views/partials/button.antlers.html
   - resources/views/partials/redirects.antlers.html
   - resources/views/layout.antlers.html
