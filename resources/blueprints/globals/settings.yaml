@@ -27,6 +27,11 @@ tabs:
         display: Contacts
         fields:
           -
+            handle: organization
+            field:
+              type: text
+              display: Organization
+          -
             handle: phone
             field:
               input_type: tel
@@ -110,6 +115,30 @@ tabs:
               type: assets
               display: 'Favicon (PNG)'
               width: 50
+  map:
+    display: Map
+    sections:
+      -
+        fields:
+          -
+            handle: google_maps_api_key
+            field:
+              type: text
+              display: 'Google Maps API key'
+              width: 66
+          -
+            handle: map_id
+            field:
+              type: text
+              display: 'Map ID'
+              width: 33
+          -
+            handle: marker
+            field:
+              directory: resources/svg
+              type: icon
+              display: Marker
+              default: marker
   analytics:
     display: Analytics
     sections:
