@@ -4,4 +4,12 @@ export default {
   printWidth: 120,
   singleAttributePerLine: true,
   singleQuote: true,
+  overrides: [
+    {
+      files: ['*.antlers.html'],
+      options: {
+        parser: 'antlers',
+      },
+    },
+  ],
 };

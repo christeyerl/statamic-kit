@@ -15,20 +15,23 @@ export_paths:
   - resources/fieldsets/utilities/schema.yaml
   - resources/fieldsets/utilities/sitemap.yaml
   - resources/views/errors/404.antlers.html
-  - resources/views/pages/home.antlers.html
   - resources/views/partials/layout/analytics.antlers.html
   - resources/views/partials/layout/favicons.antlers.html
+  - resources/views/partials/layout/footer.antlers.html
+  - resources/views/partials/layout/header.antlers.html
   - resources/views/partials/layout/meta.antlers.html
   - resources/views/partials/layout/schema.antlers.html
+  - resources/views/partials/redirects.antlers.html
+  - resources/views/partials/ui/button.antlers.html
+  - resources/views/templates/pages/home.antlers.html
+  - resources/views/templates/pages/page.antlers.html
   - resources/views/utilities/sitemap/index.antlers.html
   - resources/views/utilities/sitemap/show.antlers.html
-  - resources/views/partials/button.antlers.html
-  - resources/views/partials/redirects.antlers.html
   - resources/views/layout.antlers.html
-  - resources/views/page.antlers.html
   - routes/web.php
   - .editorconfig
   - .gitignore
+  - package.json
   - pint.json
   - postcss.config.js
   - prettier.config.js

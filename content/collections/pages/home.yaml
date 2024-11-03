@@ -2,5 +2,5 @@
 id: home
 blueprint: page
 title: Home
-template: pages/home
+template: templates/pages/home
 ---
